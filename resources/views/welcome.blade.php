@@ -75,7 +75,8 @@
       </table>
         
     </div>
-    <div><button class="btn btn-success btn-lg" style="width:100%;">Browse all jobs</button></div><br><br>
+    <div>
+      <a href="{{'alljobs'}}"><button class="btn btn-success btn-lg" style="width:100%;">Browse all jobs</button></a></div><br><br>
     <h1>Featured Companies</h1>
 </div>
 <div class="container">
@@ -83,11 +84,11 @@
     @foreach($companies as $company)
     <div class="col-md-3">
       <div class="card" style="width: 18rem;">
-        IMAGES
+        <img src="{{asset('uploads/logo')}}/{{$company->logo}}" width="80">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">{{$company->cname}}</h5>
+          <p class="card-text">{{str_limit($company->description,20)}}</p>
+          <a href="{{route('company.index',[$company->id,$company->slug])}}" class="btn btn-primary">Visit company</a>
         </div>
       </div>
     </div>

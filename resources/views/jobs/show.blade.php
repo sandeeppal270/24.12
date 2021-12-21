@@ -32,7 +32,8 @@
                 <p>Address:{{$job->address}}</p>
                 <p>Employment Type:{{$job->type}}</p>
                 <p>Position:{{$job->position}}</p>
-                <p>Date:{{$job->created_at}}</p>
+                <p>Posted:{{ $job->created_at }}</p>
+                <p>Last date to apply:{{date('F d, Y',strtotime($job->last_date))}}</p>
 
                    
                 </div>
