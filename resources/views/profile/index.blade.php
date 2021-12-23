@@ -12,7 +12,7 @@
             <br><br>
             <form action="{{route('avatar')}}" method="POST" enctype="multipart/form-data">@csrf
             <div class="card">
-                <div class="card-header">Update resume</div>
+                <div class="card-header">Update profile picture</div>
                     <div class="card-body">
                         <input type="file" class="form-control" name="avatar"><br>
                         <button class="btn btn-success float-right" type="submit">Update</button>
