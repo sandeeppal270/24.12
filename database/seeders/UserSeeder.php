@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
     {
         $faker= \Faker\Factory::create();
 
-        $limit = 10;
+        $limit = 12;
 
         for ($i = 0; $i < $limit; $i++) {
 
